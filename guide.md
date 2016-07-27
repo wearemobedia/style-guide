@@ -36,7 +36,7 @@ In general:
 
 CSS rules should be across multiple lines for efficient diffing. An exception would be a single line rule within a selector.
 
-```
+```css
 .c-btn {
     display: inline-block;
     padding: 6px 12px;
@@ -47,7 +47,7 @@ CSS rules should be across multiple lines for efficient diffing. An exception wo
 
 In a multiple-selector ruleset, related selectors should be on the same line, unrelated ones on their own line.
 
-```
+```css
 .foo, .foo--bar,
 .baz {
     display: block;
@@ -60,7 +60,7 @@ In a multiple-selector ruleset, related selectors should be on the same line, un
 - Separate closely related rulesets with 1 blank line
 - Separate unrelated rulesets with 5 blank lines
 
-```
+```css
 .foo { }
 
 .foo--small {}
@@ -77,7 +77,7 @@ In a multiple-selector ruleset, related selectors should be on the same line, un
 
 Try to align common strings in rulesets where possible.
 
-```
+```css
 .foo {
     position: absolute;
     top:    0;
@@ -99,7 +99,7 @@ Use Normalize.css to ensure a universal baseline.
 
 We followed a specificity-driven ordering of Sass files seperated into different 'layers'
 
-The idea is that you import styles into your CSS in **specificity order**. This stops you having to fight against your own code when trying to apply a particular style. It also makes for leaner and more DRY CSS.
+The idea is that you `import` styles into your CSS in **specificity order**. This stops you having to fight against your own code when trying to apply a particular style. It also makes for leaner and more DRY CSS.
 
 ```
 styles
@@ -128,7 +128,7 @@ styles
 └ style.scss
 ```
 
-These layers are then ```import```ed into the main sheet, in the order above.
+These layers are then `import`ed into the main sheet, in the order above.
 
 The layers are as follows:
 
@@ -170,7 +170,7 @@ We use a Namespace-Block__Element--Modifer naming convention. This allows classe
 
 For example:
 
-```
+```css
 .c-btn--big - A big button in the component layer.
 .o-media__image - An image in a media object in the object layer.
 .o-flag--more-padding__content - A content div inside a flag object with more padding (an extreme example).
@@ -186,7 +186,7 @@ The hierarchy of your classes does not need to match the DOM. It's purely for se
 
 The advantage of this naming convention is that we can see the relationship between classes at a glance without knowing about the CSS in detail.
 
-```
+```html
 <div class="media person premium">
     <img class="image" />
     <p class="body name">Steve</p>
@@ -195,7 +195,7 @@ The advantage of this naming convention is that we can see the relationship betw
 
 How are all these classes related? Where are the dependencies?
 
-```
+```html
 <div class="o-media  c-person c-person--premium">
     <img class="o-media__image" />
     <p class="o-media__body  c-person__name">Steve</p>
@@ -254,7 +254,7 @@ Four spaces, no tabs.
 
 Variable declarations should be made on separate lines with individual var statements for effective diffing.
 
-```
+```javascript
 // Good
 var foo;
 var bar = 1;
@@ -279,7 +279,7 @@ var foo,
 - Private variables should be camelCased;
 - Constants should be UPPERCASED;
 
-```
+```javascript
 (function() {
     
     var HALFPI = 1.57;
@@ -301,7 +301,7 @@ var foo,
 
 Always name functions. This especially makes debugging easier because the console will spit out the function name in which an exception was thrown.
 
-```
+```javascript
 arr.each(function plusOne(item) {
  item.x ++;
 });
@@ -315,13 +315,13 @@ All JS should be minfied and concatenated to a single file for production. Libra
 
 Only select DOM elements using special classes and do not mix classes for styling and classes for DOM selection. Classes for DOM selection should be prefixed with js-
 
-```
+```html
 <a href="#" class="c-btn c-btn--big  js-signup-button">Sign Up</a>
 ```
 
 DOM selector classes do not follow the NBEM naming structure.
 
-Don't use ```data``` attributes for selection. They should only be used for arbitrary data storage.
+Don't use `data-` attributes for selection. They should only be used for arbitrary data storage.
 
 ### Closures
 
@@ -329,13 +329,13 @@ Don't use ```data``` attributes for selection. They should only be used for arbi
 
 When checking for equality === should be used.
 
-```
+```javascript
 if (x === 'lol') {}
 ```
 
 When checking for an undefined variable typeof should be used.
 
-```
+```javascript
 if (typeof x !== 'undefined') {}
 ```
 
@@ -343,7 +343,7 @@ if (typeof x !== 'undefined') {}
 
 Modern JS has deprecated non-strict mode so strict mode should always be used
 
-```
+```javascript
 (function() {
     'use strict';
 })();
@@ -353,12 +353,14 @@ Modern JS has deprecated non-strict mode so strict mode should always be used
 
 Single quotes (') should be used.
 
-```
+```javascript
 var foo = 'lol';
 ```
 
 C#
 --
+
+Generally, the C# style should adhere to the current Microsoft Style Guide.
 
 ### Structure/Layout
 
