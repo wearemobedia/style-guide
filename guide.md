@@ -278,17 +278,17 @@ var foo,
 
 - Variables in the public scope should be PascalCased
 - Private variables should be camelCased;
-- Constants should be UPPERCASED;
+- Constants should be UPPER_CASED;
 
 ```javascript
 (function() {
     
-    var HALFPI = 1.57;
+    var HALF_PI = 1.57;
 
     var myVar = "Cakes and pies";
 
     var myFunc = function piMult(input) {
-        return input * HALFPI * 2;
+        return input * HALF_PI * 2;
     };
 
     window.MyModule = {
