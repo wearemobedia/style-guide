@@ -170,11 +170,12 @@ We use a Namespace-Block__Element--Modifer naming convention. This allows classe
 
 For example:
 
-```css
-.c-btn--big - A big button in the component layer.
-.o-media__image - An image in a media object in the object layer.
-.o-flag--more-padding__content - A content div inside a flag object with more padding (an extreme example).
-
+```sass
+.c-btn--big                     //A big button in the component layer.
+.o-media__image                 //An image in a media object in the object layer.
+.o-flag--more-padding__content  //A content div inside a flag object with more padding (an extreme example).
+```
+```html
 <a class="c-btn c-btn--big">
     <span class="c-btn__chevron">Let's Go</span>
 </a>
