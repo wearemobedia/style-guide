@@ -259,6 +259,19 @@ Four spaces, no tabs.
 
 #### Braces
 
+```if``` statements should **always** be used with curly braces.
+
+```javascript
+//Good
+if (foo === bar) {
+    baz = 1;
+}
+
+//Bad
+if (foo === bar)
+    baz = 1;
+```
+
 #### Comments
 
 ### Variable Declarations
