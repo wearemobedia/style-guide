@@ -238,6 +238,16 @@ Use pixel units for sizing elements.
 HTML
 ----
 
+### Data Attributes
+
+Data attributes should be used to attach arbitrary data to html elements.
+
+#### Booleans
+
+Booleans in data attributes should be represented as ```true``` or ```false```. JQuery automatically recognises these values and converts them to true boolean primitives.
+
+In VB.NET, Razor views will automatically output ```True``` and ```False``` when used inline. These should be converted to lowercase with a helper function.
+
 Javascript
 ----------
 
