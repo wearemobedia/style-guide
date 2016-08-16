@@ -412,6 +412,12 @@ Refer to the Javascript layout section for anything missing here
 
 ### IOC/Dependency Injection
 
+There are currently two dependency injection containers in use across our projects, these are Ninject and Autofac. For now we should stick with just these two until we can decide which one suits us best.
+
+As of writing, Ninject doesn't have a proper implementation for use with .NET Core, and because of this it isn't that easy to set up in MVC 6. However, Autofac's setup is slightly more involved than that of Ninject. I (Scott) would suggest we go with Autofac in the future however this is still up for debate.
+
+If possible, when using depenency injection we should try to use convention based mapping. This saves us having to map all classes to interfaces manually.
+
 Visual Basic .NET
 -----------------
 
